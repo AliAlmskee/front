@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "713902331942",
+    "project_id": "hadara-f7a87",
+    "storage_bucket": "hadara-f7a87.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713902331942:android:3471b5d98fe13843b5aee7",
+        "android_client_info": {
+          "package_name": "Xnor.Hadara"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8jX5bH1W6iDCz45aNsqa_Nyyj0Rnf3ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713902331942:android:377ef59da9832627b5aee7",
+        "android_client_info": {
+          "package_name": "com.example.babel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8jX5bH1W6iDCz45aNsqa_Nyyj0Rnf3ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

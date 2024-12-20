@@ -3,6 +3,7 @@ import 'package:babel/constant.dart';
 import 'package:babel/models/api_response.dart';
 import 'package:babel/models/user.dart';
 import 'package:babel/models/user_data.dart';
+import 'package:babel/utils/firebase_messaging.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,6 +12,7 @@ class AuthService {
   Future<ApiResponse> register(Map<String, String> requestBody) async {
     ApiResponse apiResponse = ApiResponse();
     try {
+      requestBody['notification_token'] = fcmToken ?? "";
       final response = await http.post(
         Uri.parse(registerURL),
         headers: {
@@ -49,7 +51,11 @@ class AuthService {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
-        body: jsonEncode({"phone_number": phoneNumber, "password": password}),
+        body: jsonEncode({
+          "phone_number": phoneNumber,
+          "password": password,
+          "notification_token": fcmToken??"",
+        }),
       );
 
       switch (response.statusCode) {

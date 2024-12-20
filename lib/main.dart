@@ -1,4 +1,5 @@
 // import 'package:babel/screens/home.dart';
+import 'package:babel/utils/firebase_messaging.dart';
 import 'package:babel/screens/login.dart';
 // import 'package:babel/screens/trip_detail_page.dart';
 // import 'package:babel/screens/intro.dart';
@@ -9,7 +10,9 @@ import 'package:provider/provider.dart';
 import 'theme_provider.dart';
 import 'l10n/app_localizations.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  initFireBase();
   runApp(
     ChangeNotifierProvider(
       create: (_) => ThemeProvider(),
